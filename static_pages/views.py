@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import StaticPage, StaticPageTrans
 
-# Create your views here.
+
+def createStaticPage():
+    pass
