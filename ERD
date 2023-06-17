@@ -1,0 +1,99 @@
+(14 tables )
+
+static_pages: 
+
+is_active (boolean)
+image (string)
+
+static_page_trans:
+
+locale (string)
+static_page_id (fk)
+slug (string)
+page_title (string,unique)
+title (string)
+content (long text)
+sub_title (string,nullable)
+btn_title (string,nullable)
+btn_link (string,nullable)
+
+--------------------------------------
+partners :
+alt_image (string)
+image_link (string) -- upload 
+
+
+--------------------------------------
+services :
+icon (string)
+is_active (bool)
+
+service_trans :
+
+locale (string)
+service_id (fk)
+title (string)
+content (long text)
+
+
+--------------------------------------
+countries : 
+
+country_trans :
+
+locale (string)
+country_id (fk)
+title (string)
+
+--------------------------------------
+states : 
+country_id (fk)
+
+
+state_trans :
+
+locale (string)
+state_id (fk)
+title (string)
+
+--------------------------------------
+centers : 
+
+country_id (fk)
+state_id (fk)
+image
+
+center_trans :
+
+locale (string)
+center_id (fk)
+title (string)
+
+--------------------------------------
+
+settings : 
+key (string)
+value (array)
+type (string) - text , number , textarea 
+
+--------------------------------------
+
+categories :
+
+category_trans: 
+--------------------------------------
+articles :
+image 
+is_active 
+
+article_trans :
+
+locale (string)
+article_id (fk)
+title (string)
+content (long text)
+
+
+
+
+
