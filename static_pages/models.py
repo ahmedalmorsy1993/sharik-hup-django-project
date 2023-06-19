@@ -9,7 +9,7 @@ class StaticPage(models.Model):
 
 class StaticPageTrans(models.Model):
     locale = models.CharField(max_length=50)
-    static_page_id = models.ForeignKey(
+    static_page = models.ForeignKey(
         StaticPage, related_name="static_page_trans", on_delete=models.CASCADE
     )
     slug = models.SlugField(unique=True)
