@@ -28,6 +28,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "services.apps.ServicesConfig",
     "static_pages.apps.StaticPagesConfig",
+    "states.apps.StatesConfig",
+    "settings.apps.SettingsConfig",
+    "partners.apps.PartnersConfig",
+    "countries.apps.CountriesConfig",
+    "centers.apps.CentersConfig",
 ]
 
 MIDDLEWARE = [
