@@ -1,14 +1,20 @@
 from django.shortcuts import render
 from .forms import StaticPageForm, StaticPageTransForm
 from django.db import transaction
+from django.http import HttpResponse
+from django.views import View
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 
+@method_decorator([csrf_exempt,transaction.atomic], name='dispatch')
+class CreateStaticPage(View):
+    def post(self, request):
+        return HttpResponse('welcome')
 
-def createStaticPage(request):
-    if request.method == "POST":
-        print(request, "request")
 
 
 @transaction.atomic
+@csrf_exempt
 def getStaticPage(request):
     static_form = None
     static_trans_form = None
