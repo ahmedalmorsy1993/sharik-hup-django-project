@@ -3,12 +3,14 @@ from django.utils.text import slugify
 
 
 class StaticPage(models.Model):
-    image = models.ImageField(upload_to="images/media")
+    image = models.ImageField(upload_to="images")
     is_active = models.BooleanField(default=True)
 
 
 class StaticPageTrans(models.Model):
-    locale = models.CharField(max_length=50)
+    LOCALES=(('en','en'),('ar','ar'))
+    
+    locale = models.CharField(max_length=50,choices=LOCALES)
     static_page = models.ForeignKey(
         StaticPage, related_name="static_page_trans", on_delete=models.CASCADE
     )
