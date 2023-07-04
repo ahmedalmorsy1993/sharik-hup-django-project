@@ -5,14 +5,7 @@ from .models import StaticPageTrans, StaticPage
 class StaticPageTransForm(forms.ModelForm):
     class Meta:
         model = StaticPageTrans
-        fields = [
-            "title",
-            "content",
-            "sub_title",
-            "btn_title",
-            "btn_link",
-        ]
-
+        fields = "__all__"
 
 class StaticPageForm(forms.ModelForm):
     class Meta:

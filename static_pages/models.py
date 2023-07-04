@@ -8,11 +8,10 @@ class StaticPage(models.Model):
 
 
 class StaticPageTrans(models.Model):
-    LOCALES=(('en','en'),('ar','ar'))
     
-    locale = models.CharField(max_length=50,choices=LOCALES)
+    locale = models.CharField(max_length=50)
     static_page = models.ForeignKey(
-        StaticPage, related_name="static_page_trans", on_delete=models.CASCADE
+        StaticPage, related_name="trans", on_delete=models.CASCADE
     )
     slug = models.SlugField(unique=True)
     page_title = models.CharField(max_length=255)
