@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "partners.apps.PartnersConfig",
     "countries.apps.CountriesConfig",
     "centers.apps.CentersConfig",
+    'django_dump_die'
 ]
 
 MIDDLEWARE = [
@@ -45,6 +46,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # "static_pages.middleware.Timing"
     # "static_pages.middleware.PrintMessage"
+    'django_dump_die.middleware.DumpAndDieMiddleware'
 ]
 
 ROOT_URLCONF = "app.urls"
